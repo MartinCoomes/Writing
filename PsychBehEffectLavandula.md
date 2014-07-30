@@ -1,3 +1,4 @@
+-   *The Psychotropic & Behavioural Effects of Lamiaceae Lavandula.*
 -   Introduction
 -   Genus Lavandula
     -   Historical and Medicinal Use
@@ -17,6 +18,9 @@
     -   Future Pharmacological Research
 -   Conclusion
 -   References
+
+*The Psychotropic & Behavioural Effects of Lamiaceae Lavandula.*
+================================================================
 
 Introduction
 ============

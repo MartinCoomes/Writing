@@ -1,6 +1,10 @@
+-   *The Efficacy and Appropriateness of Electroconvulsive Therapy.*
 -   Main Article
 -   Author Evaluation
 -   References
+
+*The Efficacy and Appropriateness of Electroconvulsive Therapy.*
+================================================================
 
 Main Article
 ============
