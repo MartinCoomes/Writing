@@ -230,7 +230,7 @@ Question 5: Is there a partial correlation between sex and wages?
 
 The final analysis used bivariate and partial correlation procedures. A table of correlations was produced, shown below in Table 8, using a two-tailed bivariate Pearson correlation procedure. These confirmed the existence of relationships between the scale variables and sex. All three scale variables were included to determine which were appropriate for the subsequent partial correlation procedure.
 
-Table 8. *Bivariate Pearson Correlations (2 tail); N=534;* \*\**= Sig. at 0.01;* \**=Sig. at 0.05*
+Table 8. *Bivariate Pearson Correlations (2 tail); N=534;* \*\* *= Sig. at 0.01;* \* *=Sig. at 0.05*
 
 ![](https://raw.githubusercontent.com/MartinCoomes/Writing/master/figures/WageDifferences1985Survey16.png)
 
