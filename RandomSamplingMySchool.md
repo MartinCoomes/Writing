@@ -169,15 +169,15 @@ Table 1. *Interval estimates and widths*
 
 ![](https://raw.githubusercontent.com/MartinCoomes/Writing/master/figures/RandomSamplingMySchool19.png)
 
-The uncorrected 90%CI of PSNRI can be used as an example of how to interpret mean CIs. Based on this interval it can be stated with 90% confidence that the average PSNRI for the population is between \$9,650 and \$12,682. This means that if an identical sampling procedure was repeated 10 times, 9 of the 10 intervals calculable would contain the true population mean PSNRI.
+The uncorrected 90%CI of PSNRI can be used as an example of how to interpret mean CIs. Based on this interval it can be stated with 90% confidence that the average PSNRI for the population is between `$`9,650 and `$`12,682. This means that if an identical sampling procedure was repeated 10 times, 9 of the 10 intervals calculable would contain the true population mean PSNRI.
 
 The corrected 95%CI of GT20%NEB can be used to show how to interpret proportion CIs. Based on this interval, it can be stated with 95% confidence that the real proportion of schools with GT20%NEB is between 37.90% and 76.39%. This interval is wider than the 90%CI example, and if an identical sampling procedure was repeated 20 times, 19 of the 20 intervals calculable would contain the true GT20%NEB proportion. The six remaining intervals for PSNRI and GT20%NEB can be interpreted in a similar way to these two examples.
 
-Comparing the widths of the CIs was the main feature of these results as most PSNRI and GT20%NEB intervals were relatively wide. Even the corrected 90%CIs, which were the narrowest with the highest precision, were approximately \$3000 and 32% wide respectively. Alternatively, using the uncorrected 95%CIs, which were the widest and most conservative; The PSNRI parameter could be as low as \$9,367 or as high as \$12,965, while the GT20%NEB parameter could be as low as 37.60% and as high as 76.68%. Although these intervals were statistically sound the width of them reduces their value as even inaccurate point estimates from the My School website may fit within them by chance.
+Comparing the widths of the CIs was the main feature of these results as most PSNRI and GT20%NEB intervals were relatively wide. Even the corrected 90%CIs, which were the narrowest with the highest precision, were approximately `$`3000 and 32% wide respectively. Alternatively, using the uncorrected 95%CIs, which were the widest and most conservative; The PSNRI parameter could be as low as `$`9,367 or as high as `$`12,965, while the GT20%NEB parameter could be as low as 37.60% and as high as 76.68%. Although these intervals were statistically sound the width of them reduces their value as even inaccurate point estimates from the My School website may fit within them by chance.
 
 Small sample size accounts for much of the interval width and larger sample sizes would result in narrower and more useful intervals. However, it should be noted that the population itself is heterogeneous, with schools having a wide range of funding arrangements and student demographics.
 
-As expected the FPC made intervals narrower and more precise. The difference was only minor (approx. \$50 for PSNRI and 0.5% GT20%NEB) due to the small sample and moderate sampling frame (i.e. large sample fraction: 28/933=0.03, 0.03\<0.1). With such a small correction it would be reasonable to leave the FPC out. Although it would be reasonable, it would not be prudent, because it still makes the intervals more precise, is technically appropriate for a hypergeometric distribution such as this, and is of little difficulty to implement when making calculations by computer.
+As expected the FPC made intervals narrower and more precise. The difference was only minor (approx. `$`50 for PSNRI and 0.5% GT20%NEB) due to the small sample and moderate sampling frame (i.e. large sample fraction: 28/933=0.03, 0.03\<0.1). With such a small correction it would be reasonable to leave the FPC out. Although it would be reasonable, it would not be prudent, because it still makes the intervals more precise, is technically appropriate for a hypergeometric distribution such as this, and is of little difficulty to implement when making calculations by computer.
 
 Extracurricular Applications
 ============================
@@ -187,7 +187,7 @@ The results can be used for other applications. Here they are employed to estima
 Confidence Intervals
 --------------------
 
-The width of the 95%CI (FPC) for PSNRI is \$3,597. A 25% reduction would be a width of approximately \$2,698. When increasing the sample size, variance was assumed to be constant while the *t* multiplier, standard error and sampling fraction were adjusted simultaneously with *n*. Calculations are as follows:
+The width of the 95%CI (FPC) for PSNRI is `$`3,597. A 25% reduction would be a width of approximately `$`2,698. When increasing the sample size, variance was assumed to be constant while the *t* multiplier, standard error and sampling fraction were adjusted simultaneously with *n*. Calculations are as follows:
 
 *Multiplier*
 
@@ -201,7 +201,7 @@ The width of the 95%CI (FPC) for PSNRI is \$3,597. A 25% reduction would be a wi
 
 ![](https://raw.githubusercontent.com/MartinCoomes/Writing/master/figures/RandomSamplingMySchool22.png)
 
-An achieved sample of 47 reduced the width to \$2,695 (closest to a 25% reduction). Assuming a 15% non-response rate, a sample of 56 schools (47/0.85=55.29=56 schools) would be necessary to achieve *n*=47.
+An achieved sample of 47 reduced the width to `$`2,695 (closest to a 25% reduction). Assuming a 15% non-response rate, a sample of 56 schools (47/0.85=55.29=56 schools) would be necessary to achieve *n*=47.
 
 Comparing Funding
 -----------------
@@ -254,10 +254,10 @@ Appendix. SAS code
 
     OPTIONS NOCENTER PAGESIZE=150 LINESIZE=256  formdlim='-';
     DATA SRS;
-    LENGTH school_type $20;
-    INPUT school_type $ percap_income langperc_GT20;
+    LENGTH school_type `$`20;
+    INPUT school_type `$` percap_income langperc_GT20;
     LABEL school_type = 'School Type'
-    percap_income = 'Income Per Student ($)'
+    percap_income = 'Income Per Student (`$`)'
     langperc_GT20 = 'Greater than 20% non-English Background';
     DATALINES;
     Catholic264310
@@ -338,7 +338,7 @@ Appendix. SAS code
     RUN;
     PROC SGPLOT DATA=DOMAIN;
     YAXIS GRID TYPE=DISCRETE;
-    YAXIS LABEL='Funding per student ($)' OFFSETMIN=.1 OFFSETMAX=.1;
+    YAXIS LABEL='Funding per student (`$`)' OFFSETMIN=.1 OFFSETMAX=.1;
     XAXIS OFFSETMIN=.1 OFFSETMAX=.1;
     BAND UPPER=UpperCLMean LOWER=LowerCLMean X=school_type  / TRANSPARENCY=.7 LEGENDLABEL='95% CL' NAME='BAND';
     SCATTER Y=Mean x=school_type /   markerattrs=(symbol=circlefilled) Yerrorlower=LowerCLMean Yerrorupper=UpperCLMean;
